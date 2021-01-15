@@ -16,9 +16,10 @@ const ContactForm = () => {
         <div>
           <label htmlFor="firstName">First Name</label>
           <input
+            id='firstName'
             name="firstName"
             placeholder="Edd"
-            ref={register({ required: true, maxLength: 3 })}
+            ref={register({ required: true, minLength: 2 })}
           />
           {errors.firstName && (
             <p>Looks like there was an error: {errors.firstName.type}</p>
@@ -40,10 +41,10 @@ const ContactForm = () => {
 
         <div>
           <label htmlFor="email">
-            Email*
+            Email
           </label>
           <input name="email" 
-            id="lastName"
+            id="email"
             placeholder="bluebill1049@hotmail.com"
             ref={register({ required: true })} 
           />
@@ -64,7 +65,7 @@ const ContactForm = () => {
             {JSON.stringify(data, null, 2)}
           </pre>
         )}
-        <input type="submit" />
+        <input id='submit' type="submit" />
       </form>
     </div>
   );

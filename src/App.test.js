@@ -8,20 +8,21 @@ import userEvent from '@testing-library/user-event';
 //     console.log('running our first test')
 // });
 
-// test('renders App without errors', ()=>{
-//     render(<App />)
-// });
+test('renders App without errors', ()=>{
+    render(<App />)
+});
 
 //Arrange: render our App component
 // test("renders App header", ()=>{
 //     render(<App />);
 // })
 
-test('test contact form', () => {
-    render(<ContactForm/>);
+// test('test contact form', () => {
+//     render(<ContactForm/>);
 
-    const firstName = screen.getByLabelText(/First Name/)
-    const lastName = screen.getByLabelText(/last name/i)
+//     const firstName = screen.getByLabelText(/First Name/)
+//     const lastName = screen.getByLabelText(/last name/i)
+    
 
 
     //Get our DOM elements
@@ -34,4 +35,4 @@ test('test contact form', () => {
     // userEvent.type(lastName, 'Stevens');
     // userEvent.type(email, 'lou@lou.com');
     // userEvent.type(message, 'Don\'t @ me');
-});
+// });
